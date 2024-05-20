@@ -1,0 +1,54 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css);
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+
+--primary: black;
+--secondary: pink;
+--alternative: yellow;
+--awesome: purple;
+--mainBoxShadow: .5vw .5vw. 3vw . var(--alternative);
+--borderColor: burlywood;
+--elementShadow: .2vw .3vw .2vw rgb(255, 215, 134);
+}
+ body{
+background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ }
+
+ .container{
+    width: 20rem;
+    aspect-ratio: 2/3;
+    box-shadow: var(--mainBoxShadow);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+ }
+
+ .container :nth-child(1), .container :last-child{
+    grid-column: 1 / -1;
+ }
+
+ :is(button, input){
+    box-shadow: var(--alternative);
+    font font-weight: bolder;
+    font size: 1.1rem;
+    transition: all 1s;
+
+    &:hover {
+        box-shadow: unset;
+        border: 2px solid var(--elementShadow);
+    }
+
+ }
