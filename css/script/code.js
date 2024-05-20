@@ -18,4 +18,4 @@ display.value= eval(entry)
         let entry = display.value
 
         })  value;
-        
+    }
